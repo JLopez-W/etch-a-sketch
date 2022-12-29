@@ -1,21 +1,26 @@
 
 const container = document.querySelector('#container');
+const gridBox = document.createElement('div');
+gridBox.setAttribute('id','gridBox');
+container.appendChild(gridBox);
+
+
 
 function grid16() {
   for(let i = 0; i < 256; i++) {
    const box16 = document.createElement('div');
    box16.classList.add('box16');
-   container.appendChild(box16);      
+   gridBox.appendChild(box16);      
   }
 }
 
-//grid16();
+grid16();
 
 function grid32() {
     for(let i = 0; i < 1024; i++) {
      const box32 = document.createElement('div');
      box32.classList.add('box32');
-     container.appendChild(box32);      
+     gridBox.appendChild(box32);      
     }
   }
   
@@ -25,7 +30,7 @@ function grid64() {
     for(let i = 0; i < 4096; i++) {
      const box64 = document.createElement('div');
      box64.classList.add('box64');
-     container.appendChild(box64);      
+     gridBox.appendChild(box64);      
     }
   }
   
@@ -35,11 +40,11 @@ function grid96() {
     for(let i = 0; i < 9216; i++) {
      const box96 = document.createElement('div');
      box96.classList.add('box96');
-     container.appendChild(box96);      
+     gridBox.appendChild(box96);      
     }
   }
   
-grid96();
+//grid96();
 
 
 box16 = document.querySelectorAll('.box16');
