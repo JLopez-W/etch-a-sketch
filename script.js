@@ -12,3 +12,11 @@ function grid16() {
 grid16();
 
 
+const box = document.querySelectorAll('.box');
+
+
+box.forEach((box) => {
+    box.addEventListener('mouseover', () => {
+    box.style.backgroundColor = 'rgba(171, 122, 217, 0.408)';
+    });
+});
