@@ -1,6 +1,13 @@
 body {
   background-color: rgb(53, 54, 58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+ 
 }
+
 
 #container { 
   display: flex;
