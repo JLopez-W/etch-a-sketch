@@ -1,9 +1,13 @@
 
 const container = document.querySelector('#container');
+const gridSelector = document.createElement('button');
+gridSelector.setAttribute('id','gridSelector');
+container.appendChild(gridSelector);
+gridSelector.textContent = 'choose a grid';
+
 const gridBox = document.createElement('div');
 gridBox.setAttribute('id','gridBox');
 container.appendChild(gridBox);
-
 
 
 function grid16() {
@@ -14,7 +18,7 @@ function grid16() {
   }
 }
 
-grid16();
+//grid16();
 
 function grid32() {
     for(let i = 0; i < 1024; i++) {
@@ -44,7 +48,7 @@ function grid96() {
     }
   }
   
-//grid96();
+grid96();
 
 
 box16 = document.querySelectorAll('.box16');
