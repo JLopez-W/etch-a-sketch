@@ -16,7 +16,8 @@ body {
   height: 100%; 
 }
 
-.box {
+
+.box16 {
   border: .5px solid rgba(171, 122, 217, 0.408); 
   column-gap: 0px;
   row-gap: 0px;
@@ -24,3 +25,10 @@ body {
   height: 36px;
 }
 
+.box32 {
+  border: .5px solid rgba(171, 122, 217, 0.408); 
+  column-gap: 0px;
+  row-gap: 0px;
+  width: 17.5px;
+  height: 17.5px;
+}
