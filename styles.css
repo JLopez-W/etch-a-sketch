@@ -16,10 +16,11 @@ body {
   height: 100%; 
 }
 
-.grid {
+.box {
   border: .5px solid rgba(171, 122, 217, 0.408); 
   column-gap: 0px;
   row-gap: 0px;
   width: 36px;
   height: 36px;
 }
+
