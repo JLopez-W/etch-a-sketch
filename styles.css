@@ -16,10 +16,25 @@ body {
   width: 100%;
 }
 
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 96px;
+
+}
+
+#title {
+  color:rgba(171, 122, 217, 0.408);
+  font-size: 3rem;
+  
+
+}
+
 #gridSelector {
   width: 200px;
   height: 50px;
-  margin-right: 200px;
   background-color:rgba(171, 122, 217, 0.408);
   color: white;
 }
@@ -31,6 +46,7 @@ body {
   width: 600px;
   /* height: 100%; */
 }
+
 
 
 .box16 {

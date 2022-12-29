@@ -1,8 +1,18 @@
 
 const container = document.querySelector('#container');
+
+const controls = document.createElement('div');
+controls.setAttribute('id','controls');
+container.appendChild(controls);
+
+const title = document.createElement('div');
+title.setAttribute('id','title');
+controls.appendChild(title);
+title.textContent = 'Sketch Box';
+
 const gridSelector = document.createElement('button');
 gridSelector.setAttribute('id','gridSelector');
-container.appendChild(gridSelector);
+controls.appendChild(gridSelector);
 gridSelector.textContent = 'choose a grid';
 
 const gridBox = document.createElement('div');
@@ -14,7 +24,7 @@ function grid16() {
   for(let i = 0; i < 256; i++) {
    const box16 = document.createElement('div');
    box16.classList.add('box16');
-   gridBox.appendChild(box16);      
+   gridBox.appendChild(box16);     
   }
 }
 
