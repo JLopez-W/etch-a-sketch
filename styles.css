@@ -2,8 +2,16 @@ body {
   background-color: rgb(53, 54, 58);
 }
 
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
 .grid {
-  background-color: blueviolet;
+  border: .5px solid blueviolet; 
   height: 50px;
   width: 50px;
+  
 }
