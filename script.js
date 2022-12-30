@@ -60,8 +60,15 @@ let canvasSize;
 
 const canvas = document.querySelectorAll('.option');
 
+function resetCanvas(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
 canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
+    resetCanvas(gridBox);
     canvasSize = canvas.id;
     if (canvasSize === 'opt16') {
       grid16();
