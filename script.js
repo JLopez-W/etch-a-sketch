@@ -14,10 +14,50 @@ const gridSelector = document.createElement('button');
 gridSelector.setAttribute('id','gridSelector');
 controls.appendChild(gridSelector);
 gridSelector.textContent = 'choose a grid';
+gridSelector.onclick = () => getDropDown();
+
+const dropDown = document.createElement('div');
+dropDown.setAttribute('id','dropDown');
+controls.appendChild(dropDown);
+dropDown.style.display = 'none';
+
+const gridOptions = document.createElement('div');
+gridOptions.classList.add('gridOptions');
+dropDown.appendChild(gridOptions);
+
+const opt16 = document.createElement('a');
+opt16.classList.add('options');
+opt16.textContent = '16x16 Canvas';
+gridOptions.appendChild(opt16);
+
+const opt32 = document.createElement('a');
+opt32.classList.add('options');
+opt32.textContent = '32x32 Canvas';
+gridOptions.appendChild(opt32);
+
+const opt64 = document.createElement('a');
+opt64.classList.add('options');
+opt64.textContent = '64x64 Canvas';
+gridOptions.appendChild(opt64);
+
+const opt96 = document.createElement('a');
+opt96.classList.add('options');
+opt96.textContent = '962x96 Canvas';
+gridOptions.appendChild(opt96);
+
+
 
 const gridBox = document.createElement('div');
 gridBox.setAttribute('id','gridBox');
 container.appendChild(gridBox);
+
+
+function getDropDown() {
+  dropDown.style.display = 'block';
+}
+
+
+
 
 
 function grid16() {
