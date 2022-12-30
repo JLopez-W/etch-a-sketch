@@ -45,15 +45,16 @@ body {
   display: none;
   width: 100px;
   padding-left: 0;
-  
-  
-  
 }
 
 
 .options {
   list-style-type: none;
   padding-top: 24px;
+}
+
+.a:hover {
+  color: rgba(171, 122, 217, 0.408);
 }
 
 #gridBox { 

@@ -10,6 +10,10 @@ title.setAttribute('id','title');
 controls.appendChild(title);
 title.textContent = 'Sketch Box';
 
+const gridBox = document.createElement('div');
+gridBox.setAttribute('id','gridBox');
+container.appendChild(gridBox);
+
 const gridSelector = document.createElement('button');
 gridSelector.setAttribute('id','gridSelector');
 controls.appendChild(gridSelector);
@@ -23,36 +27,53 @@ dropDown.style.display = 'none';
 
 
 const opt16 = document.createElement('li');
+opt16.setAttribute('id','opt16');
 opt16.classList.add('options');
 opt16.textContent = '16 x 16 Canvas';
 dropDown.appendChild(opt16);
 
 const opt32 = document.createElement('li');
+opt32.setAttribute('id','opt32');
 opt32.classList.add('options');
 opt32.textContent = '32 x 32 Canvas';
 dropDown.appendChild(opt32);
 
 const opt64 = document.createElement('li');
+opt64.setAttribute('id','opt64');
 opt64.classList.add('options');
 opt64.textContent = '64 x 64 Canvas';
 dropDown.appendChild(opt64);
 
 const opt96 = document.createElement('li');
+opt96.setAttribute('id','opt96');
 opt96.classList.add('options');
 opt96.textContent = '96 x 96 Canvas';
 dropDown.appendChild(opt96);
 
 
-const gridBox = document.createElement('div');
-gridBox.setAttribute('id','gridBox');
-container.appendChild(gridBox);
-
-
 function getDropDown() {
   dropDown.style.display = 'block';
-
 }
 
+let canvasSize;
+
+const canvas = document.querySelectorAll('.options');
+
+canvas.forEach((canvas) => {
+  canvas.addEventListener('click', () => {
+    canvasSize = canvas.id;
+    if (canvasSize === 'opt16') {
+      grid16();
+    } else if (canvasSize === 'opt32') {
+      grid32();
+   } else if (canvasSize === 'opt64') {
+      grid64();
+   } else if (canvasSize === 'opt96') {
+        grid96();
+   }
+    dropDown.style.display = 'none';
+  });
+});
 
 
 
@@ -66,7 +87,7 @@ function grid16() {
   }
 }
 
-grid16();
+//grid16();
 
 function grid32() {
     for(let i = 0; i < 1024; i++) {
