@@ -21,9 +21,6 @@ dropDown.setAttribute('id','dropDown');
 controls.appendChild(dropDown);
 dropDown.style.display = 'none';
 
-// const gridOptions = document.createElement('div');
-// gridOptions.classList.add('gridOptions');
-// dropDown.appendChild(gridOptions);
 
 const opt16 = document.createElement('li');
 opt16.classList.add('options');
