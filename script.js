@@ -21,29 +21,29 @@ dropDown.setAttribute('id','dropDown');
 controls.appendChild(dropDown);
 dropDown.style.display = 'none';
 
-const gridOptions = document.createElement('div');
-gridOptions.classList.add('gridOptions');
-dropDown.appendChild(gridOptions);
+// const gridOptions = document.createElement('div');
+// gridOptions.classList.add('gridOptions');
+// dropDown.appendChild(gridOptions);
 
 const opt16 = document.createElement('li');
 opt16.classList.add('options');
-opt16.textContent = '16x16 Canvas';
-gridOptions.appendChild(opt16);
+opt16.textContent = '16 x 16 Canvas';
+dropDown.appendChild(opt16);
 
 const opt32 = document.createElement('li');
 opt32.classList.add('options');
-opt32.textContent = '32x32 Canvas';
-gridOptions.appendChild(opt32);
+opt32.textContent = '32 x 32 Canvas';
+dropDown.appendChild(opt32);
 
 const opt64 = document.createElement('li');
 opt64.classList.add('options');
-opt64.textContent = '64x64 Canvas';
-gridOptions.appendChild(opt64);
+opt64.textContent = '64 x 64 Canvas';
+dropDown.appendChild(opt64);
 
 const opt96 = document.createElement('li');
 opt96.classList.add('options');
-opt96.textContent = '96x96 Canvas';
-gridOptions.appendChild(opt96);
+opt96.textContent = '96 x 96 Canvas';
+dropDown.appendChild(opt96);
 
 
 
@@ -53,10 +53,8 @@ container.appendChild(gridBox);
 
 
 function getDropDown() {
-  dropDown.style.display = 'flex';
-  dropDown.style.flexWrap = 'wrap';
-  dropDown.style.flexDirection = 'column';
-  dropDown.style.justifyContent = 'center';
+  dropDown.style.display = 'block';
+
 }
 
 

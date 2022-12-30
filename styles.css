@@ -43,8 +43,13 @@ body {
   position: relative;
   color: white;
   display: none;
+  width: 100px;
+  padding-left: 0;
+  
+  
   
 }
+
 
 .options {
   list-style-type: none;
