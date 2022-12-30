@@ -41,11 +41,14 @@ body {
 
 #dropDown {
   position: relative;
-  background-color: rgba(171, 122, 217, 0.408);
   color: white;
   display: none;
-  width: 200px;
-  height: 50px;
+  
+}
+
+.options {
+  list-style-type: none;
+  padding-top: 24px;
 }
 
 #gridBox { 
