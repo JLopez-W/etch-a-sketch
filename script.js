@@ -43,7 +43,6 @@ opt96.textContent = '96 x 96 Canvas';
 dropDown.appendChild(opt96);
 
 
-
 const gridBox = document.createElement('div');
 gridBox.setAttribute('id','gridBox');
 container.appendChild(gridBox);
@@ -53,7 +52,6 @@ function getDropDown() {
   dropDown.style.display = 'block';
 
 }
-
 
 
 
