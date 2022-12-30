@@ -48,12 +48,12 @@ body {
 }
 
 
-.options {
+.option {
   list-style-type: none;
   padding-top: 24px;
 }
 
-.a:hover {
+.option:hover {
   color: rgba(171, 122, 217, 0.408);
 }
 
@@ -68,16 +68,18 @@ body {
   row-gap: 0px; */
 }
 
+.box {
+  border: .5px solid rgba(171, 122, 217, 0.408); 
+}
 
-
-.box16, .box32, .box64, .box96 {
+/* .box16, .box32, .box64, .box96 {
   border: .5px solid rgba(171, 122, 217, 0.408); 
   /* margin: 0; */
   /* column-gap: 0px;
   row-gap: 0px; */
   /* width: 36px;
-  height: 36px; */
-}
+  height: 36px; 
+} */
 
 /* .box32 {
   border: .5px solid rgba(171, 122, 217, 0.408); 
