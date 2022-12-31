@@ -1,5 +1,4 @@
 
-
 const container = document.querySelector('#container');
 
 const controls = document.createElement('div');
@@ -90,50 +89,26 @@ canvas.forEach((canvas) => {
 });
 
 
+let input;
 
+function createCustom() {
+  input = prompt('Enter a number from 1 - 99');
+  if (input < 100 && input > 0) {
+    return input;
+  } else if (input > 99 || input <= 0) {
+    alert('Please try again.');
+  }
+}
 
-function grid16() {
-  for (let i = 0; i < 256; i++) {
+let percentage = '(pixels / input) + ' % '';
+function drawGrid(input) {
+  let percentage = (1 / input * 100).toFixed(3) + '%';
+  for (let i = 0; i < input * input; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
-    box.style.height = '6%';
-    box.style.width = '6%';
+    box.style.height = percentage;
+    box.style.width = percentage;
     gridBox.appendChild(box);
   }
 }
 
-
-
-function grid32() {
-  for (let i = 0; i < 1024; i++) {
-    const box = document.createElement('div');
-    box.classList.add('box');
-    box.style.height = '2.9%';
-    box.style.width = '2.9%';
-    gridBox.appendChild(box);
-  }
-}
-
-
-
-function grid64() {
-  for (let i = 0; i < 4096; i++) {
-    const box = document.createElement('div');
-    box.classList.add('box');
-    box.style.height = '1.375%';
-    box.style.width = '1.375%';
-    gridBox.appendChild(box);
-  }
-}
-
-
-
-function grid96() {
-  for (let i = 0; i < 9216; i++) {
-    const box = document.createElement('div');
-    box.classList.add('box');
-    box.style.height = '.875%';
-    box.style.width = '.875%';
-    gridBox.appendChild(box);
-  }
-}
