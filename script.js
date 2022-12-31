@@ -50,6 +50,12 @@ opt96.classList.add('option');
 opt96.textContent = '96 x 96 Canvas';
 dropDown.appendChild(opt96);
 
+const optX = document.createElement('li');
+optX.setAttribute('id', 'optX');
+optX.classList.add('option');
+optX.textContent = 'Custom Size';
+dropDown.appendChild(optX);
+
 
 function getDropDown() {
   dropDown.style.display = 'block';
