@@ -4,7 +4,6 @@ const gridSelector = document.querySelector('#gridSelector');
 gridSelector.onclick = () => getDropDown();
 
 const dropDown = document.querySelector('#dropDown');
-dropDown.style.display = 'none';
 
 function getDropDown() {
   dropDown.style.display = 'block';
