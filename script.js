@@ -6,48 +6,13 @@ const gridBox = document.querySelector('#gridBox');
 const gridSelector = document.querySelector('#gridSelector');
 gridSelector.onclick = () => getDropDown();
 
-const dropDown = document.createElement('ul');
-dropDown.setAttribute('id', 'dropDown');
-controls.appendChild(dropDown);
-dropDown.style.display = 'none';
-
-
-const opt16 = document.createElement('li');
-opt16.setAttribute('id', 'opt16');
-opt16.classList.add('option');
-opt16.textContent = '16 x 16 Canvas';
-dropDown.appendChild(opt16);
-
-const opt32 = document.createElement('li');
-opt32.setAttribute('id', 'opt32');
-opt32.classList.add('option');
-opt32.textContent = '32 x 32 Canvas';
-dropDown.appendChild(opt32);
-
-const opt64 = document.createElement('li');
-opt64.setAttribute('id', 'opt64');
-opt64.classList.add('option');
-opt64.textContent = '64 x 64 Canvas';
-dropDown.appendChild(opt64);
-
-const opt96 = document.createElement('li');
-opt96.setAttribute('id', 'opt96');
-opt96.classList.add('option');
-opt96.textContent = '96 x 96 Canvas';
-dropDown.appendChild(opt96);
-
-const optX = document.createElement('li');
-optX.setAttribute('id', 'optX');
-optX.classList.add('option');
-optX.textContent = 'Custom Size';
-dropDown.appendChild(optX);
-
-
 function getDropDown() {
   dropDown.style.display = 'block';
 }
 
-let canvasSize;
+const dropDown = document.querySelector('#dropDown');
+dropDown.style.display = 'none';
+
 
 const canvas = document.querySelectorAll('.option');
 
