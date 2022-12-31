@@ -68,15 +68,22 @@ function resetCanvas(parent) {
 canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
     resetCanvas(gridBox);
-    canvasSize = canvas.id;
+    let canvasSize = canvas.id;
     if (canvasSize === 'opt16') {
-      grid16();
+      input = 16;
+      drawGrid(input);
     } else if (canvasSize === 'opt32') {
-      grid32();
+      input = 32;
+      drawGrid(input);
     } else if (canvasSize === 'opt64') {
-      grid64();
+      input = 64;
+      drawGrid(input);
     } else if (canvasSize === 'opt96') {
-      grid96();
+      input = 96;
+      drawGrid(input);
+    } else if (canvasSize === 'optX') {
+      createCustom();
+      drawGrid(input);
     }
     dropDown.style.display = 'none';
     const boxes = document.querySelectorAll('.box');
