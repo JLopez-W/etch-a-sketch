@@ -1,23 +1,9 @@
 
 const container = document.querySelector('#container');
 
-const controls = document.createElement('div');
-controls.setAttribute('id', 'controls');
-container.appendChild(controls);
+const gridBox = document.querySelector('#gridBox');
 
-const title = document.createElement('div');
-title.setAttribute('id', 'title');
-controls.appendChild(title);
-title.textContent = 'Sketch Box';
-
-const gridBox = document.createElement('div');
-gridBox.setAttribute('id', 'gridBox');
-container.appendChild(gridBox);
-
-const gridSelector = document.createElement('button');
-gridSelector.setAttribute('id', 'gridSelector');
-controls.appendChild(gridSelector);
-gridSelector.textContent = 'choose a canvas size';
+const gridSelector = document.querySelector('#gridSelector');
 gridSelector.onclick = () => getDropDown();
 
 const dropDown = document.createElement('ul');
