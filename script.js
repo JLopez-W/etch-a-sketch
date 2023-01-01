@@ -65,15 +65,24 @@ canvas.forEach((canvas) => {
       createCustom();
       drawNoLines(input);
   }
-    dropDown.style.display = 'none';
-    const boxes = document.querySelectorAll('.box, .boxNo');
-    boxes.forEach((boxes) => {
-      boxes.addEventListener('mouseover', () => {
-        boxes.style.backgroundColor = 'rgba(171, 122, 217, 0.408)';
-      });
-    });
+      dropDown.style.display = 'none';
   });
 });
+  pen.forEach((pen) => { 
+  pen.addEventListener('click', () => { 
+  let penColor = pen.id;
+  colorList.style.display = 'none';
+    
+  const boxes = document.querySelectorAll('.box, .boxNo');
+  boxes.forEach((boxes) => {
+  boxes.addEventListener('mouseover', () => { 
+  boxes.style.backgroundColor = penColor;
+  
+  });
+});
+});
+});
+
 
 let input;
 
