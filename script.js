@@ -3,20 +3,31 @@ const gridBox = document.querySelector('#gridBox');
 const gridSelector = document.querySelector('#gridSelector');
 gridSelector.onclick = () => getDropDown();
 
+
 const dropDown = document.querySelector('#dropDown');
 
 function getDropDown() {
   dropDown.style.display = 'block';
 }
 
+const penDropdown = document.querySelector('#penDropdown');
+penDropdown.onclick = () => getColorList();
+
+const colorList = document.querySelector('#colorList');
+
+function getColorList() {
+  colorList.style.display = 'block';
+}
 
 const canvas = document.querySelectorAll('.option');
+const pen = document.querySelectorAll('.pen');
 
 function resetCanvas(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
 }
+
 
 canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
@@ -25,29 +36,44 @@ canvas.forEach((canvas) => {
     if (canvasSize === 'opt16') {
       input = 16;
       drawGrid(input);
+    } else if (canvasSize === 'opt16no') {
+      input = 16;
+      drawNoLines(input);
     } else if (canvasSize === 'opt32') {
       input = 32;
       drawGrid(input);
+    } else if (canvasSize === 'opt32no') {
+      input = 32;
+      drawNoLines(input);
     } else if (canvasSize === 'opt64') {
       input = 64;
       drawGrid(input);
+    } else if (canvasSize === 'opt64no') {
+      input = 64;
+      drawNoLines(input);
     } else if (canvasSize === 'opt96') {
       input = 96;
       drawGrid(input);
+    } else if (canvasSize === 'opt96no') {
+      input = 96;
+      drawNoLines(input);
     } else if (canvasSize === 'optX') {
       createCustom();
       drawGrid(input);
-    }
+    } else if (canvasSize === 'optXno') {
+      input = 32;
+      createCustom();
+      drawNoLines(input);
+  }
     dropDown.style.display = 'none';
-    const boxes = document.querySelectorAll('.box');
-        boxes.forEach((boxes) => {
-        boxes.addEventListener('mouseover', () => {
+    const boxes = document.querySelectorAll('.box, .boxNo');
+    boxes.forEach((boxes) => {
+      boxes.addEventListener('mouseover', () => {
         boxes.style.backgroundColor = 'rgba(171, 122, 217, 0.408)';
       });
     });
   });
 });
-
 
 let input;
 
@@ -60,7 +86,9 @@ function createCustom() {
   }
 }
 
+
 let percentage = '(pixels / input) + ' % '';
+
 function drawGrid(input) {
   let percentage = (1 / input * 100).toFixed(3) + '%';
   for (let i = 0; i < input * input; i++) {
@@ -72,3 +100,13 @@ function drawGrid(input) {
   }
 }
 
+function drawNoLines(input) {
+  let percentage = (1 / input * 100).toFixed(3) + '%';
+  for (let i = 0; i < input * input; i++) {
+    const boxNo = document.createElement('div');
+    boxNo.classList.add('boxNo');
+    boxNo.style.height = percentage;
+    boxNo.style.width = percentage;
+    gridBox.appendChild(boxNo);
+  }
+}
