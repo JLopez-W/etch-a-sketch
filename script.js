@@ -10,6 +10,9 @@ function getDropDown() {
   dropDown.style.display = 'block';
 }
 
+const rainbow = document.querySelector('#rainbow');
+const colorArray = ['#FFF', '#931010', '#dd612c', '#ffd500', '#70a423', '#68abdf', '#ab7ad9'];
+
 const penDropdown = document.querySelector('#penDropdown');
 penDropdown.onclick = () => getColorList();
 
@@ -28,6 +31,7 @@ function resetCanvas(parent) {
   }
 }
 
+let input;
 
 canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
@@ -74,17 +78,22 @@ canvas.forEach((canvas) => {
   colorList.style.display = 'none';
     
   const boxes = document.querySelectorAll('.box, .boxNo');
-  boxes.forEach((boxes) => {
-  boxes.addEventListener('mouseover', () => { 
-  boxes.style.backgroundColor = penColor;
-  
+        
+      boxes.forEach((boxes) => {
+      boxes.addEventListener('mouseover', () => { 
+        if (penColor === 'rainbow') {
+          boxes.style.backgroundColor = makeRainbow();
+        } else {
+          boxes.style.backgroundColor = penColor;
+        } 
+      
+      });
+    });
   });
 });
-});
-});
 
 
-let input;
+
 
 function createCustom() {
   input = prompt('Enter a number from 1 - 99');
@@ -118,4 +127,8 @@ function drawNoLines(input) {
     boxNo.style.width = percentage;
     gridBox.appendChild(boxNo);
   }
+}
+
+function makeRainbow() {
+  return colorArray[ Math.round( Math.random() * colorArray.length ) ];
 }

@@ -66,6 +66,33 @@ body {
   color: rgba(171, 122, 217, 0.408);
 }
 
+.pen:hover {
+  color: rgba(171, 122, 217, 0.408);
+}
+
+#penDropdown {
+  width: 200px;
+  height: 50px;
+  background-color:rgba(171, 122, 217, 0.408);
+  color: white;
+}
+
+#colorList {
+  position: relative;
+  display: none;
+  width: 100px;
+  padding-left: 0;
+}
+
+.pen {
+  list-style-type: none;
+  padding-top: 18px;
+  margin-top: 18px;
+  width: 200px;
+  height: 28px;
+}
+
+
 #right {
   display: flex;
   flex-wrap: wrap;
@@ -87,7 +114,8 @@ body {
 .box {
   max-width: 100%;
   box-sizing: border-box;
-  border: 1px solid rgba(171, 122, 217, 0.408); 
+  border: 1px solid rgba(171, 122, 217, 0.408);
+ 
 }
 
 .boxNo {
@@ -95,7 +123,8 @@ body {
   box-sizing: border-box;
 }
 
-#\#000 {
+
+ #\#000 {
   background-color: black; 
 }
 
@@ -135,3 +164,7 @@ body {
   background-color: #ab7ad9;
   
 } 
+
+#rainbow {
+  background: linear-gradient(to right, #931010,  #dd612c, #ffd500, #70a423, #68abdf, #ab7ad9);
+}
