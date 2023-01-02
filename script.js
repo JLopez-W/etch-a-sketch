@@ -100,13 +100,14 @@ canvas.forEach((canvas) => {
 
 
 function createCustom() {
-  input = prompt('Enter a number from 1 - 99');
-  if (input < 100 && input > 0) {
+  input = prompt('Enter a number from 2 - 99');
+  if (input < 100 && input > 1) {
     return input;
-  } else if (input > 99 || input <= 0) {
-    alert('Please try again.');
+  } else if (input > 99 || input < 2) {
+    alert ('Sorry, that won\'t work.\nNumber must be between 2 and 99.\nPlease try again.');
   }
 }
+
 
 
 let percentage = '(pixels / input) + ' % '';
