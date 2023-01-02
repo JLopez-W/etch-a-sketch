@@ -18,7 +18,7 @@ const colorArray = ['#FFF', '#931010', '#dd612c', '#ffd500', '#70a423', '#68abdf
 const penDropdown = document.querySelector('#penDropdown');
 penDropdown.onclick = () => getColorBox();
 
-const colorBox = document.querySelector('#colorList');
+const colorBox = document.querySelector('#colorBox');
 
 function getColorBox() {
   colorBox.style.display = 'flex';
@@ -86,7 +86,7 @@ canvas.forEach((canvas) => {
       boxes.forEach((boxes) => {
       boxes.addEventListener('mouseover', () => { 
         if (penColor === 'rainbow') {
-          boxes.style.backgroundColor = makeRainbow();
+          boxes.style.backgroundColor = colorArray[ Math.round( Math.random() * colorArray.length ) ];
         } else {
           boxes.style.backgroundColor = penColor;
         } 
@@ -133,6 +133,4 @@ function drawNoLines(input) {
   }
 }
 
-function makeRainbow() {
-  return colorArray[ Math.round( Math.random() * colorArray.length ) ];
-}
+
