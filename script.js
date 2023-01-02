@@ -56,33 +56,31 @@ canvas.forEach((canvas) => {
      } else {
           getInputFromString(canvasSize);
           drawGrid(input);
-      }
-
-      gridDropdown.style.display = 'none';
-      penDropdown.style.display = 'block';
-      getColorBox();
+    }
+    
+    gridDropdown.style.display = 'none';
+    penDropdown.style.display = 'block';
+    getColorBox();
   });
 });
-  pen.forEach((pen) => { 
-  pen.addEventListener('click', () => { 
-  let penColor = pen.id;
+    pen.forEach((pen) => { 
+    pen.addEventListener('click', () => { 
+    let penColor = pen.id;
     
-  const boxes = document.querySelectorAll('.box, .boxNo');
+    const boxes = document.querySelectorAll('.box, .boxNo');
         
-      boxes.forEach((boxes) => {
-      boxes.addEventListener('mouseover', () => { 
-        if (penColor === 'rainbow') {
+    boxes.forEach((boxes) => {
+    boxes.addEventListener('mouseover', () => { 
+      if (penColor === 'rainbow') {
           boxes.style.backgroundColor = colorArray[ Math.round( Math.random() * colorArray.length ) ];
         } else {
           boxes.style.backgroundColor = penColor;
         } 
-      
+
       });
     });
   });
 });
-
-
 
 
 function createCustom() {
@@ -91,9 +89,9 @@ function createCustom() {
     return input;
   } else if (input > 99 || input < 2) {
     alert ('Sorry, that won\'t work.\nNumber must be between 2 and 99.\nPlease try again.');
+    input = false;
   }
 }
-
 
 
 let percentage = '(pixels / input) + ' % '';
@@ -109,6 +107,7 @@ function drawGrid(input) {
   }
 }
 
+
 function drawNoLines(input) {
   let percentage = (1 / input * 100).toFixed(3) + '%';
   for (let i = 0; i < input * input; i++) {
@@ -119,6 +118,7 @@ function drawNoLines(input) {
     gridBox.appendChild(boxNo);
   }
 }
+
 
 function getInputFromString(canvasSize) {
   let gridOption = Array.from(canvasSize);
