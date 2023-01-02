@@ -40,38 +40,24 @@ canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
     resetCanvas(gridBox);
     let canvasSize = canvas.id;
-    if (canvasSize === 'opt16') {
-      input = 16;
-      drawGrid(input);
-    } else if (canvasSize === 'opt16no') {
-      input = 16;
-      drawNoLines(input);
-    } else if (canvasSize === 'opt32') {
-      input = 32;
-      drawGrid(input);
-    } else if (canvasSize === 'opt32no') {
-      input = 32;
-      drawNoLines(input);
-    } else if (canvasSize === 'opt64') {
-      input = 64;
-      drawGrid(input);
-    } else if (canvasSize === 'opt64no') {
-      input = 64;
-      drawNoLines(input);
-    } else if (canvasSize === 'opt96') {
-      input = 96;
-      drawGrid(input);
-    } else if (canvasSize === 'opt96no') {
-      input = 96;
-      drawNoLines(input);
-    } else if (canvasSize === 'optX') {
-      createCustom();
-      drawGrid(input);
-    } else if (canvasSize === 'optXno') {
-      input = 32;
-      createCustom();
-      drawNoLines(input);
-  }
+     if (canvasSize.includes('Xno')) {
+          createCustom();
+          console.log(input);
+          drawNoLines(input);
+    } else if (canvasSize.includes('X')) {
+          createCustom();
+          console.log(input);
+          drawGrid(input);
+     } else if (canvasSize.includes('no')) {
+          console.log(canvasSize);
+          getInputFromString(canvasSize);
+          console.log(input);
+          drawNoLines(input);
+     } else {
+          getInputFromString(canvasSize);
+          drawGrid(input);
+      }
+
       gridDropdown.style.display = 'none';
       penDropdown.style.display = 'block';
       getColorBox();
@@ -134,4 +120,9 @@ function drawNoLines(input) {
   }
 }
 
-
+function getInputFromString(canvasSize) {
+  let gridOption = Array.from(canvasSize);
+  const newArray = gridOption.slice(3);
+  let newString = newArray.join('');
+  return input = newString.slice(0,2);
+}
