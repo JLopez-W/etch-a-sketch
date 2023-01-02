@@ -57,9 +57,11 @@ body {
 
 
 .option {
-  list-style-type: none;
-  padding-top: 24px;
-  width: 200px;
+  margin-left: -40px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 240px;
+  font-size: 18px;
 }
 
 .option:hover {
