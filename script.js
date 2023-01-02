@@ -3,7 +3,6 @@ const gridBox = document.querySelector('#gridBox');
 const gridSelector = document.querySelector('#gridSelector');
 gridSelector.onclick = () => getGridDropdown();
 
-
 const gridDropdown = document.querySelector('#gridDropdown');
 
 function getGridDropdown() {
@@ -40,7 +39,7 @@ canvas.forEach((canvas) => {
   canvas.addEventListener('click', () => {
     resetCanvas(gridBox);
     let canvasSize = canvas.id;
-     if (canvasSize.includes('Xno')) {
+    if (canvasSize.includes('Xno')) {
           createCustom();
           console.log(input);
           drawNoLines(input);
@@ -76,7 +75,6 @@ canvas.forEach((canvas) => {
         } else {
           boxes.style.backgroundColor = penColor;
         } 
-
       });
     });
   });
@@ -93,8 +91,6 @@ function createCustom() {
   }
 }
 
-
-let percentage = '(pixels / input) + ' % '';
 
 function drawGrid(input) {
   let percentage = (1 / input * 100).toFixed(3) + '%';
