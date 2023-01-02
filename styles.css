@@ -77,21 +77,25 @@ body {
   color: white;
 }
 
-#colorList {
-  position: relative;
-  display: none;
-  width: 100px;
-  padding-left: 0;
-}
+
+#colorBox {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 360px;
+    margin-left: 0;
+    margin-top: 8px;
+  }
 
 .pen {
-  list-style-type: none;
-  padding-top: 18px;
-  margin-top: 18px;
-  width: 200px;
-  height: 28px;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
 }
 
+.pen:hover {
+  border: solid white 2px;
+}
 
 #right {
   display: flex;

@@ -8,18 +8,21 @@ const dropDown = document.querySelector('#dropDown');
 
 function getDropDown() {
   dropDown.style.display = 'block';
+  colorBox.style.display = 'none';
+  penDropdown.style.display = 'none';
 }
 
 const rainbow = document.querySelector('#rainbow');
 const colorArray = ['#FFF', '#931010', '#dd612c', '#ffd500', '#70a423', '#68abdf', '#ab7ad9'];
 
 const penDropdown = document.querySelector('#penDropdown');
-penDropdown.onclick = () => getColorList();
+penDropdown.onclick = () => getColorBox();
 
-const colorList = document.querySelector('#colorList');
+const colorBox = document.querySelector('#colorList');
 
-function getColorList() {
-  colorList.style.display = 'block';
+function getColorBox() {
+  colorBox.style.display = 'flex';
+  colorBox.style.flexWrap = 'wrap';
 }
 
 const canvas = document.querySelectorAll('.option');
@@ -70,12 +73,13 @@ canvas.forEach((canvas) => {
       drawNoLines(input);
   }
       dropDown.style.display = 'none';
+      penDropdown.style.display = 'block';
+      getColorBox();
   });
 });
   pen.forEach((pen) => { 
   pen.addEventListener('click', () => { 
   let penColor = pen.id;
-  colorList.style.display = 'none';
     
   const boxes = document.querySelectorAll('.box, .boxNo');
         
