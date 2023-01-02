@@ -1,13 +1,13 @@
 const gridBox = document.querySelector('#gridBox');
 
 const gridSelector = document.querySelector('#gridSelector');
-gridSelector.onclick = () => getDropDown();
+gridSelector.onclick = () => getGridDropdown();
 
 
-const dropDown = document.querySelector('#dropDown');
+const gridDropdown = document.querySelector('#gridDropdown');
 
-function getDropDown() {
-  dropDown.style.display = 'block';
+function getGridDropdown() {
+  gridDropdown.style.display = 'block';
   colorBox.style.display = 'none';
   penDropdown.style.display = 'none';
 }
@@ -72,7 +72,7 @@ canvas.forEach((canvas) => {
       createCustom();
       drawNoLines(input);
   }
-      dropDown.style.display = 'none';
+      gridDropdown.style.display = 'none';
       penDropdown.style.display = 'block';
       getColorBox();
   });
