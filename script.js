@@ -85,7 +85,7 @@ function createCustom() {
   input = prompt('Enter a number from 2 - 99');
   if (input < 100 && input > 1) {
     return input;
-  } else if (input > 99 || input < 2) {
+  } else if (input > 99 || input < 2 || isNaN(input)) {
     alert ('Sorry, that won\'t work.\nNumber must be between 2 and 99.\nPlease try again.');
     input = false;
   }
