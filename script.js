@@ -12,7 +12,7 @@ function getGridDropdown() {
 }
 
 const rainbow = document.querySelector('#rainbow');
-const colorArray = ['#FFF', '#931010', '#dd612c', '#ffd500', '#70a423', '#68abdf', '#ab7ad9', '#dea1b9'];
+const colorArray = ['#e1e0e0', '#8f2424', '#c6702a', '#b79434', '#739a4c', '#277196', '#8668a1', '#ab7c8f'];
 
 const penDropdown = document.querySelector('#penDropdown');
 penDropdown.onclick = () => getColorBox();

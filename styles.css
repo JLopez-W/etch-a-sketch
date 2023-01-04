@@ -127,50 +127,51 @@ body {
   }
   
  
-#\#000 {
-    background-color: black;   
+#\#292828 {
+    background-color: #292828;   
   }
   
 #\#808080 {
     background-color: gray;
   }
   
-#\#FFF {
-    background-color: white;
+#\#e1e0e0 {
+    background-color: #e1e0e0;
   }
   
-#\#b98b5f{
-    background-color: #b98b5f;
+#\#735b45{
+    background-color: #735b45;
   }
   
-#\#931010 {
-    background-color: #931010;
+#\#8f2424 {
+    background-color: #8f2424;
   }
   
-  #\#dd612c {
-    background-color: #dd612c;
+  #\#c6702a {
+    background-color: #c6702a;
   }
   
-#\#ecd355 {
-    background-color: #ecd355;
+#\#b79434 {
+    background-color: #b79434;
   }
    
-#\#70a423 {
-    background-color: #70a423;
+#\#739a4c {
+    background-color: #739a4c;
   }
   
-#\#68abdf {
-    background-color: #68abdf;
+#\#277196 {
+    background-color: #277196;
   }
   
-#\#ab7ad9 {
-    background-color: #ab7ad9; 
+#\#8668a1 {
+    background-color: #8668a1; 
   } 
+
+#\#ab7c8f{
+    background: #ab7c8f;
+  }
   
 #rainbow {
-    background: linear-gradient(to right, #931010,  #dd612c, #ffd500, #70a423, #68abdf, #ab7ad9);
+    background: linear-gradient(to right, #8f2424,  #c6702a, #b79434, #739a4c, #277196, #8668a1, #ab7c8f);
   }
   
-#\#dea1b9{
-    background: #dea1b9;
-  }
