@@ -21,4 +21,4 @@ The aim of this project was to demonstrate CSS, JavaScript, and DOM manipulation
 ***
 
 ### Live Preview: 
-https://jlopez-w.github.io/etch-a-sketch/
+https://jlopez-w.github.io/paint-box/
