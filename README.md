@@ -10,7 +10,7 @@ The aim of this project was to demonstrate CSS, JavaScript, and DOM manipulation
 - A grid that allows the user to input a number that will generate a square grid, with each side being equal to the number the user entered
 - A limit to the number of squares in the grid to prevent crashing
 - The size of the grid is always the same, regardless of the number of grid squares inside of it
-- A hover effect that changes the color of the grid squares when the mouse passes through the grid to create a pixelated drawing effect
+- A hover effect that changes the color of the squares when the mouse passes through the grid to create a pixelated drawing effect
 
 ### Additional Features: 
     
